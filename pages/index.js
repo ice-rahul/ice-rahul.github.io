@@ -22,10 +22,10 @@ export default function Home() {
               <a href="https://www.google.com" className="mr-5 hover:text-gray-900">Home</a>
               <a href="https://www.google.com" className="mr-5 hover:text-gray-900">About</a>
               <a href="https://www.google.com" className="mr-5 hover:text-gray-900">Portfolio</a>
-              <a href="https://www.google.com" className="mr-5 hover:text-gray-900">Contact</a>
+              <a href="https://www.google.com" className="mr-5 hover:text-gray-900">GitHub</a>
             </nav>
-            <button className="inline-flex items-center px-3 py-1 mt-4 text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-700 md:mt-0">Contact Us
-      <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <button className="inline-flex items-center px-3 py-1 mt-4 text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-700 md:mt-0">Contact Me
+              <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </button>
@@ -56,10 +56,48 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left">
               <h1 className="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">About Me,
-                <br/> <span className="text-base">FrontEnd Developer (MERN Stack) , FullStack Developer (LAMP Stack)</span>
+                <br /> <span className="text-base">FrontEnd Developer (MERN Stack) , FullStack Developer (LAMP Stack)</span>
               </h1>
               <p className="mb-8 leading-relaxed">I&rsquo;m an IT professional with 5+ years of experience in various software domains. I have been working in technologies like PHP (core + MVC Frameworks), ReactJs, Android, MySql, HTML, CSS, Javascript, etc. Still learning new technologies and frameworks to upgrade and update my skills as per industry standards.</p>
               <p className="mb-8 leading-relaxed">Just as a side note, this website is built using Next.js and Tailwind CSS <span role="img" aria-label="happy">&#128513;</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative text-gray-600 body-font">
+          <div className="container flex flex-wrap px-5 py-24 mx-auto sm:flex-nowrap">
+            <div className="relative flex items-end justify-start p-10 overflow-hidden bg-gray-300 rounded-lg lg:w-2/3 md:w-1/2 sm:mr-10">
+              <iframe width="100%" height="100%" className="absolute inset-0" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.0066311083896!2d81.27266082918625!3d21.191105249538737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDExJzI4LjAiTiA4McKwMTYnMjMuNiJF!5e0!3m2!1sen!2sin!4v1613470933526!5m2!1sen!2sin"></iframe>
+              <div className="relative flex flex-wrap py-6 bg-white rounded shadow-md">
+                <div className="px-6 lg:w-1/2">
+                  <h2 className="text-xs font-semibold tracking-widest text-gray-900 title-font">ADDRESS</h2>
+                  <p className="mt-1">H.No. 106/ Ward 32, Brahmanpara Near Durga Mandir, Durg C.G. INDIA</p>
+                </div>
+                <div className="px-6 mt-4 lg:w-1/2 lg:mt-0">
+                  <h2 className="text-xs font-semibold tracking-widest text-gray-900 title-font">EMAIL</h2>
+                  <a href="mailto:meet4g@gmail.com" className="leading-relaxed text-indigo-500">meet4g@gmail.com</a>
+                  <h2 className="mt-4 text-xs font-semibold tracking-widest text-gray-900 title-font">PHONE</h2>
+                  <p className="leading-relaxed">+91-96910-78419</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full mt-8 bg-white lg:w-1/3 md:w-1/2 md:ml-auto md:py-8 md:mt-0">
+              <h2 className="mb-1 text-lg font-medium text-gray-900 title-font">Feedback / Query</h2>
+              <p className="mb-5 leading-relaxed text-gray-600">Please fill the below form and submit your feedback</p>
+              <div className="relative mb-4">
+                <label htmlFor="name" className="text-sm text-gray-600 leading-7">Name</label>
+                <input type="text" id="name" name="name" className="w-full px-3 py-1 text-base text-gray-700 bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 leading-8 transition-colors duration-200 ease-in-out" />
+              </div>
+              <div className="relative mb-4">
+                <label htmlFor="email" className="text-sm text-gray-600 leading-7">Email</label>
+                <input type="email" id="email" name="email" className="w-full px-3 py-1 text-base text-gray-700 bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 leading-8 transition-colors duration-200 ease-in-out" />
+              </div>
+              <div className="relative mb-4">
+                <label htmlFor="message" className="text-sm text-gray-600 leading-7">Message</label>
+                <textarea id="message" name="message" className="w-full h-32 px-3 py-1 text-base text-gray-700 bg-white border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 leading-6 transition-colors duration-200 ease-in-out"></textarea>
+              </div>
+              <button className="px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">Button</button>
+              <p className="mt-3 text-xs text-gray-500">I will get back to you via mail within 24 working hours, In case of urgent communication you can directly mail me or contact via whatsapp (+919691078419)</p>
             </div>
           </div>
         </section>
