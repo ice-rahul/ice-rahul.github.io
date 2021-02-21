@@ -13,32 +13,40 @@ export default function Home() {
   };
   const goToAbout = () => {
     window.scrollTo({
-      top: about.current.getBoundingClientRect().top - 100,
+      top: about.current.offsetTop - 100,
       behavior: 'smooth',
     });
   };
   const goToPortfolio = () => {
     window.scrollTo({
-      top: portfolio.current.getBoundingClientRect().top - 100,
+      top: portfolio.current.offsetTop,
       behavior: 'smooth',
     });
   };
   const goToContact = () => {
     window.scrollTo({
-      top: contact.current.getBoundingClientRect().top - 100,
+      top: contact.current.offsetTop,
       behavior: 'smooth',
     });
+  };
+
+  const goToGitHub = () => {
+    window.location.href = 'https://github.com/ice-rahul';
+  };
+
+  const openUrl = (url) => {
+    window.location.href = url;
   };
 
   return (
     <>
       <Head>
-        <title>Home Page</title>
+        <title>Rahul Agrawal: Home Page</title>
         <link rel="icon" href="/assets/img/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Portfolio Website by Rahul Agrawal" />
         <meta name="keywords" content="HTML, CSS, JavaScript, React, Next, PHP, Code Igniter" />
-        <meta name="author" content="John Doe"></meta>
+        <meta name="author" content="Rahul Agrawal"></meta>
       </Head>
       <main>
         <header className="sticky top-0 text-gray-600 bg-white body-font">
@@ -54,7 +62,7 @@ export default function Home() {
               <button onClick={goToHome} className="mr-5 outline-none focus:outline-none hover:text-gray-900">Home</button>
               <button onClick={goToAbout} className="mr-5 outline-none focus:outline-none hover:text-gray-900">About</button>
               <button onClick={goToPortfolio} className="mr-5 outline-none focus:outline-none hover:text-gray-900">Portfolio</button>
-              <button className="mr-5 outline-none focus:outline-none hover:text-gray-900">GitHub</button>
+              <button onClick={goToGitHub} className="mr-5 outline-none focus:outline-none hover:text-gray-900">GitHub</button>
             </nav>
             <button onClick={goToContact} className="inline-flex items-center px-3 py-1 mt-4 text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-700 md:mt-0">Contact Me
               <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -72,7 +80,7 @@ export default function Home() {
               </h1>
               <p className="mb-8 leading-relaxed text-justify">I&rsquo;m extremely happy to see you spare some time on my website. I would be happy to connect with you in near future for your upcoming assignments and would recommend exploring my website and projects.</p>
               <div className="flex justify-center">
-                <button className="inline-flex px-6 py-2 text-lg text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-600">View Portfolio</button>
+                <button onClick={goToPortfolio} className="inline-flex px-6 py-2 text-lg text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-600">View Portfolio</button>
                 <button className="inline-flex px-6 py-2 ml-4 text-lg text-gray-700 bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200">Download Resume</button>
               </div>
             </div>
@@ -99,18 +107,16 @@ export default function Home() {
 
         <section className="text-gray-600 body-font" ref={portfolio}>
           <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-col">
-              <div className="h-1 overflow-hidden bg-gray-200 rounded">
-                <div className="w-24 h-full bg-blue-500"></div>
+            <div className="flex flex-wrap w-full mb-20">
+              <div className="w-full mb-6 lg:w-1/2 lg:mb-0">
+                <h1 className="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Some Of My Projects</h1>
+                <div className="w-20 h-1 bg-blue-500 rounded"></div>
               </div>
-              <div className="flex flex-col flex-wrap py-6 mb-12 sm:flex-row">
-                <h1 className="mb-2 text-2xl font-medium text-gray-900 sm:w-2/5 title-font sm:mb-0">Some Of My Projects</h1>
-                <p className="pl-0 text-base leading-relaxed sm:w-3/5 sm:pl-10">I have tried to show some of my projects along with the source code made available using GitHub</p>
-              </div>
+              <p className="w-full leading-relaxed text-gray-500 lg:w-1/2">I have tried to show some of my projects along with the source code made available using GitHub</p>
             </div>
-            <div className="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
+            <div className="flex flex-wrap justify-center -mx-4 -mt-4 -mb-10 sm:-m-4">
               <div className="p-4 mb-6 md:w-1/3 sm:mb-0">
-                <div className="h-64 overflow-hidden rounded-lg">
+                <div role="button" tabIndex={0} className="h-64 overflow-hidden rounded-lg cursor-pointer" onClick={() => openUrl('https://ice-rahul.github.io/lyrics')} onKeyUp={() => openUrl('https://ice-rahul.github.io/lyrics')}>
                   <img alt="content" className="object-cover object-center w-full h-full border" loading="lazy" src="assets/img/lyrics.png" />
                 </div>
                 <h2 className="mt-5 text-xl font-medium text-gray-900 title-font">Get Lyrics</h2>
@@ -130,26 +136,26 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4 mb-6 md:w-1/3 sm:mb-0">
-                <div className="h-64 overflow-hidden rounded-lg">
+                <div role="button" tabIndex={0} className="h-64 overflow-hidden rounded-lg cursor-pointer" onClick={() => openUrl('https://ice-rahul.github.io/fast-fingers')} onKeyUp={() => openUrl('https://ice-rahul.github.io/fast-fingers')}>
                   <img alt="content" className="object-cover object-center w-full h-full border" loading="lazy" src="assets/img/fast-fingers.png" />
                 </div>
                 <h2 className="mt-5 text-xl font-medium text-gray-900 title-font">Fast Fingers</h2>
                 <p className="mt-2 text-base leading-relaxed text-justify"><span className="font-medium">Why?</span> This project is made using Create React App. The notion was to create a project purely on react.</p>
                 <p className="mt-2 text-base leading-relaxed text-justify"><span className="font-medium">What?</span> This is a word typing game which has three level’s namely EASY, MEDIUM, and HARD. You will have to keep typing the words which are getting displayed. The game will indicate letters typed correctly, letters typed incorrectly, letters not typed, total time spent in the game, time left for typing, the difficulty of the game, and the scoreboard. Also, the difficulty factor is dynamic as per your performance.</p>
                 <div className="flex flex-row justify-between">
-                  <a href="https://www.google.com" className="inline-flex items-center mt-3 mr-3 text-blue-500">Launch Project
+                  <a href="https://ice-rahul.github.io/fast-fingers" className="inline-flex items-center mt-3 mr-3 text-blue-500">Launch Project
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
                   </a>
-                  <a href="https://www.google.com" className="inline-flex items-center mt-3 text-blue-500">Dive into Code
+                  <a href="https://github.com/ice-rahul/fast-fingers" className="inline-flex items-center mt-3 text-blue-500">Dive into Code
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
                   </a>
                 </div>
               </div>
-              <div className="p-4 mb-6 md:w-1/3 sm:mb-0">
+              <div className="hidden p-4 mb-6 md:w-1/3 sm:mb-0">
                 <div className="h-64 overflow-hidden rounded-lg">
                   <img alt="content" className="object-cover object-center w-full h-full" src="/assets/img/coming_soon.svg" />
                 </div>
@@ -213,7 +219,7 @@ export default function Home() {
         <footer className="relative text-gray-600 bg-white body-font">
           <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
             <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-              <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+              <a href="https://ice-rahul.github.io" className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20" r="20" fill="#3B82F6" />
                   <path d="M11.9219 26H8.43262V13.3438H14.6553C15.2412 13.3438 15.8066 13.4141 16.3516 13.5547C16.8965 13.6895 17.377 13.9062 17.793 14.2051C18.2148 14.498 18.5488 14.8789 18.7949 15.3477C19.0469 15.8164 19.1729 16.3848 19.1729 17.0527C19.1729 17.5742 19.0615 18.0664 18.8389 18.5293C18.6221 18.9863 18.3291 19.3965 17.96 19.7598C17.5967 20.1172 17.1777 20.416 16.7031 20.6562C16.2285 20.8906 15.7363 21.0459 15.2266 21.1221C15.4551 21.5088 15.6924 21.875 15.9385 22.2207C16.1904 22.5664 16.4424 22.8916 16.6943 23.1963C16.9521 23.4951 17.207 23.7734 17.459 24.0312C17.7109 24.2832 17.9512 24.5146 18.1797 24.7256C18.7188 25.2178 19.252 25.6426 19.7793 26H15.4287C15.0771 25.666 14.7432 25.2646 14.4268 24.7959C14.1572 24.3975 13.8848 23.9053 13.6094 23.3193C13.3398 22.7275 13.1318 22.0449 12.9854 21.2715H11.9219V26ZM15.6309 17.0527C15.6309 16.2031 15.4229 15.5791 15.0068 15.1807C14.5967 14.7822 13.9785 14.583 13.1523 14.583H11.9219V20.0762H13.1523C13.5918 20.0762 13.9668 19.9941 14.2773 19.8301C14.5938 19.6602 14.8516 19.4375 15.0508 19.1621C15.25 18.8809 15.3965 18.5586 15.4902 18.1953C15.584 17.832 15.6309 17.4512 15.6309 17.0527ZM33.4727 19.9443V20.1113C33.4609 20.6035 33.4082 21.1133 33.3145 21.6406C33.2266 22.168 33.1006 22.6953 32.9365 23.2227C32.7725 23.75 32.5762 24.2715 32.3477 24.7871C32.1191 25.3027 31.8613 25.7949 31.5742 26.2637C31.293 26.7383 30.9883 27.1807 30.6602 27.5908C30.332 28.0068 29.9863 28.373 29.623 28.6895L28.3135 27.9336C28.5186 27.5879 28.7031 27.21 28.8672 26.7998C29.0371 26.3955 29.1895 25.9707 29.3242 25.5254C29.459 25.0801 29.5732 24.623 29.667 24.1543C29.7666 23.6855 29.8486 23.2197 29.9131 22.7568C29.9775 22.2939 30.0244 21.8398 30.0537 21.3945C30.0889 20.9434 30.1064 20.5156 30.1064 20.1113C30.1064 19.7949 30.1035 19.4375 30.0977 19.0391C30.0977 18.6348 30.0742 18.2246 30.0273 17.8086C29.9863 17.3926 29.916 16.9883 29.8164 16.5957C29.7168 16.1973 29.5674 15.8428 29.3682 15.5322C29.1748 15.2217 28.9229 14.9727 28.6123 14.7852C28.3076 14.5977 27.9268 14.5039 27.4697 14.5039C27.0654 14.5039 26.7168 14.5742 26.4238 14.7148C26.1367 14.8496 25.8906 15.0342 25.6855 15.2686C25.4863 15.4971 25.3252 15.7637 25.2021 16.0684C25.085 16.373 24.9912 16.6953 24.9209 17.0352C24.8564 17.3691 24.8125 17.709 24.7891 18.0547C24.7715 18.3945 24.7627 18.7168 24.7627 19.0215V21.4736H28.5508V22.9238H24.7627V26H21.2734V19.5664C21.2734 18.6465 21.4199 17.791 21.7129 17C22.0059 16.209 22.4189 15.5234 22.9521 14.9434C23.4912 14.3574 24.1357 13.9004 24.8857 13.5723C25.6416 13.2383 26.4824 13.0713 27.4082 13.0713C28.0352 13.0713 28.6211 13.1621 29.166 13.3438C29.7168 13.5195 30.2178 13.7656 30.6689 14.082C31.1201 14.3926 31.5215 14.7646 31.873 15.1982C32.2305 15.626 32.5264 16.0947 32.7607 16.6045C33.001 17.1143 33.1826 17.6533 33.3057 18.2217C33.4287 18.79 33.4844 19.3643 33.4727 19.9443Z" fill="white" />
@@ -227,16 +233,16 @@ export default function Home() {
                 <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Github</h2>
                 <nav className="mb-10 list-none">
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://github.com/ice-rahul/lyrics" className="text-gray-600 hover:text-gray-800">Get Lyrics</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://github.com/ice-rahul/fast-fingers" className="text-gray-600 hover:text-gray-800">Fast Fingers</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://github.com/ice-rahul/fitnessClub" className="text-gray-600 hover:text-gray-800">Fitness Club</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://github.com/ice-rahul/ice-rahul.github.io" className="text-gray-600 hover:text-gray-800">Portfolio</a>
                   </li>
                 </nav>
               </div>
@@ -261,16 +267,16 @@ export default function Home() {
                 <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Projects</h2>
                 <nav className="mb-10 list-none">
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://ice-rahul.github.io/lyrics/" className="text-gray-600 hover:text-gray-800">Get Lyrics</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://ice-rahul.github.io/fast-fingers/" className="text-gray-600 hover:text-gray-800">Fast Fingers</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://ice-rahul.github.io/fitnessClub/" className="text-gray-600 hover:text-gray-800">Fitness Club</a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Coming Soon</a>
+                    <a href="https://ice-rahul.github.io" className="text-gray-600 hover:text-gray-800">Portfolio</a>
                   </li>
                 </nav>
               </div>
@@ -278,16 +284,38 @@ export default function Home() {
                 <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Social</h2>
                 <nav className="mb-10 list-none">
                   <li>
-                    <a href="https://www.linkedin.com/in/rahul-agrawal-b6868887" className="text-gray-600 hover:text-gray-800">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/rahul-agrawal-b6868887" className="flex text-gray-600 hover:text-gray-800">
+                      <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                      </svg>
+                    Linkedin
+                    </a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Gmail</a>
+                    <a href="mailto:meet4g@gmail.com" className="flex text-gray-600 hover:text-gray-800">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                      </svg>
+                      Gmail
+                    </a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Facebook</a>
+                    <a href="https://ice-rahul.github.io" className="flex text-gray-600 hover:text-gray-800">
+                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                    Facebook
+                    </a>
                   </li>
                   <li>
-                    <a className="text-gray-600 hover:text-gray-800">Instagram</a>
+                    <a href="https://ice-rahul.github.io" className="flex text-gray-600 hover:text-gray-800">
+                      <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                      </svg>
+                      Instagram
+                    </a>
                   </li>
                 </nav>
               </div>
@@ -299,17 +327,17 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/rahul-agrawal-b6868887" rel="noopener noreferrer" className="ml-1 text-gray-600" target="_blank">@rahul</a>
               </p>
               <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-                <a className="text-gray-500">
+                <a href="https://ice-rahul.github.io" className="text-gray-500">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                   </svg>
                 </a>
-                <a className="ml-3 text-gray-500">
+                <a href="https://ice-rahul.github.io" className="ml-3 text-gray-500">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                   </svg>
                 </a>
-                <a className="ml-3 text-gray-500">
+                <a href="https://ice-rahul.github.io" className="ml-3 text-gray-500">
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
