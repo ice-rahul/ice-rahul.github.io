@@ -178,6 +178,77 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col w-full mb-20 text-center">
+              <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Some Sample CSS Designs</h1>
+              <p className="mx-auto text-base leading-relaxed lg:w-2/3">I have tried to show some of random design challenges solved over <a className="text-blue-500" target="__blank" href="https://cssbattle.dev">cssbattle.dev</a> </p>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/600x360" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Shooting Stars</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/601x361" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">The Catalyzer</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/603x363" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">The 400 Blows</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/602x362" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Neptune</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/605x365" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Holden Caulfield</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/606x366" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Alper Kamu</h1>
+                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="relative text-gray-600 body-font bg-gray-50" ref={contact}>
           <div className="container flex flex-wrap px-5 py-24 mx-auto sm:flex-nowrap">
             <div className="relative flex items-end justify-start p-10 overflow-hidden bg-gray-300 rounded-lg lg:w-2/3 md:w-1/2 sm:mr-10">
@@ -229,6 +300,23 @@ export default function Home() {
               <p className="mt-2 text-sm text-gray-500">On a mission to be a better technologist</p>
             </div>
             <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+            <div className="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/2">
+                <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Navigation</h2>
+                <nav className="mb-10 list-none">
+                  <li>
+                    <button onClick={goToHome} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Home</button>
+                  </li>
+                  <li>
+                    <button onClick={goToAbout} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">About</button>
+                  </li>
+                  <li>
+                    <button onClick={goToPortfolio} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Portfolio</button>
+                  </li>
+                  <li>
+                    <button onClick={goToContact} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Contact</button>
+                  </li>
+                </nav>
+              </div>
               <div className="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/2">
                 <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Github</h2>
                 <nav className="mb-10 list-none">
@@ -243,23 +331,6 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="https://github.com/ice-rahul/ice-rahul.github.io" className="text-gray-600 hover:text-gray-800">Portfolio</a>
-                  </li>
-                </nav>
-              </div>
-              <div className="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/2">
-                <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">Navigation</h2>
-                <nav className="mb-10 list-none">
-                  <li>
-                    <button onClick={goToHome} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Home</button>
-                  </li>
-                  <li>
-                    <button onClick={goToAbout} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">About</button>
-                  </li>
-                  <li>
-                    <button onClick={goToPortfolio} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Portfolio</button>
-                  </li>
-                  <li>
-                    <button onClick={goToContact} className="text-gray-600 outline-none focus:outline-none hover:text-gray-800">Contact</button>
                   </li>
                 </nav>
               </div>
@@ -302,9 +373,9 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="https://ice-rahul.github.io" className="flex text-gray-600 hover:text-gray-800">
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-2" viewBox="0 0 24 24">
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
+                      <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
                     Facebook
                     </a>
                   </li>
