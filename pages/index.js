@@ -49,7 +49,7 @@ export default function Home() {
         <meta name="author" content="Rahul Agrawal"></meta>
       </Head>
       <main>
-        <header className="sticky top-0 text-gray-600 bg-white body-font">
+        <header className="sticky top-0 z-10 text-gray-600 bg-white body-font">
           <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
             <a href="https://ice-rahul.github.io" className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,69 +182,150 @@ export default function Home() {
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col w-full mb-20 text-center">
               <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Some Sample CSS Designs</h1>
-              <p className="mx-auto text-base leading-relaxed lg:w-2/3">I have tried to show some of random design challenges solved over <a className="text-blue-500" target="__blank" href="https://cssbattle.dev">cssbattle.dev</a> </p>
+              <p className="mx-auto text-base leading-relaxed lg:w-2/3">I have tried to show some of random design challenges solved over <a className="text-blue-500" target="__blank" href="https://cssbattle.dev/player/rahul_agrawal">cssbattle.dev</a> </p>
             </div>
-            <div className="flex flex-wrap -m-4">
+            <div className="flex flex-wrap justify-center -m-4">
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/600x360" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-3.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Shooting Stars</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 3</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Push Button</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/3">https://cssbattle.dev/play/3</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/601x361" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-8.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">The Catalyzer</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 8</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Forking Crazy</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/8">https://cssbattle.dev/play/8</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/603x363" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-9.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">The 400 Blows</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 9</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Tesseract</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/9">https://cssbattle.dev/play/9</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/602x362" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-10.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Neptune</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 10</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Cloaked Spirits</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/10">https://cssbattle.dev/play/10</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/605x365" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-11.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Holden Caulfield</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 11</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Eye of Sauron</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/11">https://cssbattle.dev/play/11</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
               <div className="p-4 lg:w-1/3 sm:w-1/2">
                 <div className="relative flex">
-                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="https://dummyimage.com/606x366" />
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-14.png" />
                   <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">THE SUBTITLE</h2>
-                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Alper Kamu</h1>
-                    <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 14</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Web Maker Logo</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/14">https://cssbattle.dev/play/14</a><br/><br/><br/><br/></p>
                   </div>
                 </div>
               </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-15.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 15</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">OverLap</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/15">https://cssbattle.dev/play/15</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-16.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 16</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Eye of Tiger</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/16">https://cssbattle.dev/play/16</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-19.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 19</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Cube</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/19">https://cssbattle.dev/play/19</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-20.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 20</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Ticket</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/20">https://cssbattle.dev/play/20</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-21.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 21</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">SitePoint Logo</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/21">https://cssbattle.dev/play/21</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-32.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 32</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Band Aid</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/32">https://cssbattle.dev/play/32</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-33.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 33</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">Birdie</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/33">https://cssbattle.dev/play/33</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 lg:w-1/3 sm:w-1/2">
+                <div className="relative flex">
+                  <img alt="gallery" className="absolute inset-0 object-cover object-center w-full h-full" src="/assets/img/css-target-35.png" />
+                  <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+                    <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Challenge No. 35</h2>
+                    <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">ICE Cream</h1>
+                    <p className="leading-relaxed">Link for the challenge: <a className="text-blue-500" href="https://cssbattle.dev/play/35">https://cssbattle.dev/play/35</a><br/><br/><br/><br/></p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
